@@ -42,13 +42,13 @@ Questões Discursivas (3,4,11 e 12):
         Considerando que o Banco de dados usados foi o Mysql no workbench.
         * Primeiro Criar as tabelas e triggers citadas acima no banco de dados.
         * Segundo Configurar o mysql no script abaixo, colocando o host,user,senha e nome do banco criado.
-            # congif MySQL
+            # config MySQL
             app.config['MYSQL_HOST'] = 'Seu_HOST'
             app.config['MYSQL_USER'] = 'Seu_USER'
             app.config['MYSQL_PASSWORD'] = 'Sua_Senha'
             app.config['MYSQL_DB'] = 'Seu_BancodeDados'
 
-        * Feito os passos acima. Basta rodar o script no notebook Questões. Que mostra-rá uma saida:
+        * Feito os passos acima. Basta rodar o script no notebook Questões. Que mostrará uma saida da forma abaixo:
         Exemplo:
             * Serving Flask app "__main__" (lazy loading)
             * Environment: production
