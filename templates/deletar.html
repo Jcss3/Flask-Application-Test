@@ -1,0 +1,4 @@
+<form action="{{ url_for('delete_entry') }}" method=post class=delete-entry>
+          <input type="hidden" name="entry_id" value="{{ loop.revindex }}">
+          <input type="submit" value="Delete" />
+</form>
