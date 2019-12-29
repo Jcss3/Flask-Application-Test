@@ -1,0 +1,69 @@
+Respostas das Questões.
+
+* Questões 1 e 2 :
+    O Script(Questões_1_2.py) esta na pasta Scripts e tambem podem ser vistos no notebook Questoes com exemplos já testados.
+    Sendo funções basta chamalas e passar o input.
+
+    * Questao 1: A função deve determinar a quantidade de intervalos distintos dentro de um input com uma serie de conjuntos distintos.
+
+        O input será uma lista com os conjuntos distintos da forma [ conjuntos de intervalos distintos ] = [(1,3),(2,5),(7,9)]
+        Ex:
+        A função IntervalosDistintos receberá como parametro [(1,3),(2,5),(7,9)] e retornará o output = 2.
+
+        IntervalosDistintos([(1,3),(2,5),(7,9)]) = 2
+
+    * Questão 2: Será fornecido um sequências de dois números, que determinará a quantidade de ocorrencias de a e b respectivamente, a função deve retornar uma palavra composta de a's e b's respeitando os valores passados , se possivel.
+
+        o input será da seguinte forma: dois inteiros 
+        Ex
+        A função Q2 receberá como paramentro 3 6 e retornará o out put = 'bbabbabba'
+
+        Q2(3,6) = 'bbabbabba'
+        
+Questões Discursivas (3,4,11 e 12):
+    Em formato de texto no notebook Questões E tambem na pasta Textos em formato pdf.
+
+* Questões Relacionadas a aplicação web e o banco de dados(5 á 10):
+    Um script App.py encontra-se na pasta Scripts com o codigo para essas qeutões porém como foi feito para rodar no jupyter notebook
+    pode haver erros na hora de da run. 
+    * Recomendo rodar o codigo que está no notebook Questões.
+
+    * Questões 5 e 8:
+        O script tb_usuario.sql refere-se a tabela para armazenar os dados login, senha, email, hora do registro.
+        Enquanto o script logs.sql será uma tabela que armazena todos os registros(logs) do sistema, usando triggers e outros metodos que estão nas questões posteriores. 
+            Sendo esses registros:
+                * Inserção/Criação de um usuario no sistema. Atraves do Metodo Register que dispara a trigger de inserção.
+                * Update/Atualização de um usuario no sistema. Atraves do Metodo Update que dispara a trigger de update.
+                * Delete/Remoção de um usuario no sistema. Atraves do Metodo delete que dispara a trigger de delete.
+                * Login de um usuario no sistema. Quando logado no sistema , é inserido na tabela log as informações do atual usario do sistema e a ação de estar Conectado ao sistema.
+                * logout de um usuario no sistema. Quando Desconectado do sistema , é inserido na tabela log as informações do usario do sistema e a ação de ter Desconectado do sistema.
+
+    * Questões 6,7,9,10:
+        Considerando que o Banco de dados usados foi o Mysql no workbench.
+        * Primeiro Criar as tabelas e triggers citadas acima no banco de dados.
+        * Segundo Configurar o mysql no script abaixo, colocando o host,user,senha e nome do banco criado.
+            # congif MySQL
+            app.config['MYSQL_HOST'] = 'Seu_HOST'
+            app.config['MYSQL_USER'] = 'Seu_USER'
+            app.config['MYSQL_PASSWORD'] = 'Sua_Senha'
+            app.config['MYSQL_DB'] = 'Seu_BancodeDados'
+
+        * Feito os passos acima. Basta rodar o script no notebook Questões. Que mostra-rá uma saida:
+        Exemplo:
+            * Serving Flask app "__main__" (lazy loading)
+            * Environment: production
+            WARNING: This is a development server. Do not use it in a production deployment.
+            Use a production WSGI server instead.
+            * Debug mode: on
+            * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+            
+        O link em Running http://127.0.0.1:5000/ levará a aplicação web
+        
+        Esta por vez possui no canto superior direito 
+        * botões para registro e login
+            * Em register: cadastrará no sistema o login,email,senha do usário.
+            * Em login: Terá os campos de login e senha para logar no sistema.
+                * Estando logado no sistema aparecera campos de Historico,updateconta e deletar conta alem de logout.
+                    * Historico recuperará  as informações de log do usuário.
+                    * update conta e deletar conta mostrara alguns campos a serem preenchidos para garantir a atualização da conta ou remoção da mesma.
+                    * Logout retornara para tela de login.

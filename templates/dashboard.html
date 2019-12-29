@@ -1,15 +1,14 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<h1><strong>Histórico do Sistema:</strong><small>Usuário -- {{session.login}}</small></h1>
-<a class="btn btn-success" href="/add_article"> Add Article</a>
+<h1><strong>Histórico do Sistema:</strong><small> <h3>Usuário -- {{session.login}}</h3></small></h1>
 <hr>
 
 <table class="table table-striped">
     <tr>
       <th>Ação</th>
       <th>Login</th>
-      <!-- <th>Password</th> -->
+      <th>Password</th>
       <th>Email</th>
       <th>Data_Registro</th>
     </tr>
@@ -17,7 +16,7 @@
       <tr>
         <td>{{registro.log_acao}}</td>
         <td>{{registro.log_login}}</td>
-        <!-- <td>{{registro.log_senha}}</td> -->
+        <td>{{registro.log_senha}}</td>
         <td>{{registro.log_email}}</td>
         <td>{{registro.log_hora_registro}}</td>
       </tr>
